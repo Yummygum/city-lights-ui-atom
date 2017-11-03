@@ -1,0 +1,108 @@
+// Tree View
+// -------------------
+// Used to explore and open files in the current project.
+// Overrides: atom/tree-view
+
+.tree-view-resizer {
+  border-right: 0 solid @base-border-color;
+}
+// hides project tab in tree-view ⬇⬇ (who uses this?)
+
+.atom-dock-inner {
+  .pane .list-inline {
+    display: none;
+  }
+}
+
+.item-views {
+  .tree-view-root {
+    padding-left: 16px;
+    padding-right: 0;
+    min-width: inherit;
+  }
+
+  .tree-view {
+    margin-top: 11px;
+    color: @text-color !important;
+    background-color: @tree-view-background-color;
+
+    .list-tree {
+      position: relative;
+      // hide first indent line in tree view ⬇
+      &:first-child:before {
+        display: none;
+      }
+      // line before folder ⬇
+      &:before {
+        content: '';
+        width: 1px;
+        height: 100%;
+        background: #2a2f38;
+        position: absolute;
+        left: 2px;
+        top: 0;
+      }
+
+      .list-item {
+        line-height: 28px;
+        position: relative;
+        color: @text-color;
+        cursor: pointer;
+        overflow:hidden;
+
+        &.file {
+          margin-left: 2px !important;
+          padding-left: 37px !important;
+
+          &:hover {
+            border-radius: 2px;
+            background-color: rgba(42, 48, 56, 0.3);
+
+            // .name:after {
+            //   display: none;
+            // }
+          }
+
+          &:before {
+            background: transparent;
+          }
+
+          &:after {
+            content: '';
+            width: 3px;
+            height: 3px;
+            border-radius: 100px;
+            background-color: #2a2f38;
+            position: absolute;
+            left: 17px;
+            top: 50% - 3px;
+          }
+        }
+
+        &.selected {
+          margin: 0;
+          color: #cbd1e1 !important;
+          padding-left: 35px !important;
+          height: 28px;
+          border-left: 3px solid #478dff;
+          border-radius: 1px 2px 2px 1px;
+          left: -1px;
+          background: #2a2f38;
+
+          &.status-added,
+          &.status-modified {
+            &:before {
+              right: 9px;
+              left: auto;
+            }
+          }
+
+          &:after {
+            background: #181d23;
+            left: 15px;
+          }
+        }
+      }
+    }
+  }
+}

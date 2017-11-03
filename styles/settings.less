@@ -1,0 +1,457 @@
+@mainBackgroundColor: #1d252c;
+
+.settings-view.pane-item {
+  background: @mainBackgroundColor !important;
+
+  .editor-container {
+    margin: 8px 0 48px;
+
+    .editor.mini {
+      opacity: 1;
+      border-radius: 3px;
+      line-height: 32px;
+      background-color: #131920 !important;
+      font-family: 'Droid Sans Mono', monospace;
+    }
+  }
+
+  .section.packages {
+    .btn-group {
+      .btn {
+        border:1px solid #161b21;
+        &.selected {
+          border:none !important;
+          background-color:#b4c5d4;
+          color:#333F4A;
+        }
+      }
+    }
+  }
+
+  select.form-control {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    transition: 0;
+    height: 32px;
+    border-radius: 3px;
+    color: #b7c5d3;
+    font-size: 13px;
+    font-weight: 500;
+    box-shadow: 0 0.5px 3px 0 rgba(12, 16, 21, 0.2);
+    border: 1px solid #161b21;
+    transition: 200ms ease;
+    background: #333f4a url('atom://city-lights-ui/icons/icon-dropdown.svg') no-repeat right 8px center !important;
+
+    &:hover {
+      color: #edf2f7;
+      background: #3f505f url('atom://city-lights-ui/icons/icon-dropdown-hover.svg') no-repeat right 8px center !important;
+    }
+  }
+
+  .controls {
+    // .checkbox {
+    label {
+      .input-checkbox {
+        border-radius: 3px;
+        background-color: #333f4a;
+        box-shadow: 0 0.5px 3px 0 rgba(12, 16, 21, 0.2);
+        border: 1px solid ##161b21;
+        color: #ebf1f7;
+
+        &:hover {
+          background-color: #3f515f;
+        }
+
+        &:after,
+        &:before {
+          background-color: #ebf1f7;
+        }
+      }
+
+      .setting-title {
+        font-size: 13px;
+        font-weight: 500;
+        color: #b7c5d3;
+      }
+    }
+
+    .setting-description {
+      font-size: 11px;
+      text-align: left;
+      color: #718ca1;
+      font-weight: 300;
+      margin-top: 2px;
+    }
+    // }
+  }
+
+  .config-menu {
+    background: @mainBackgroundColor;
+    border-right: 1px solid @mainBackgroundColor;
+    position: relative;
+    width: 190px;
+    flex: 2 !important;
+    padding-top: 22px;
+
+    .panels-menu {
+      margin-left: 8px;
+
+      li {
+        color: #697883;
+        font-size: 12px;
+        text-align: left;
+
+        a {
+          color: inherit;
+          padding: 10px 10px 10px 24px;
+          display: flex;
+
+          &:hover {
+            background-color: darken(#333f4a, 8%);
+          }
+
+          &:before {
+            content: '';
+            object-fit: contain;
+            margin-right: 9px;
+            background-position: center center;
+            background-repeat: no-repeat;
+          }
+
+          &.icon-settings:before {
+            background-image: url('atom://city-lights-ui/icons/icon-core.svg');
+          }
+
+          &.icon-code:before {
+            background-image: url('atom://city-lights-ui/icons/icon-editor.svg');
+          }
+
+          &.icon-keyboard:before {
+            width:17px;
+            background-image: url('atom://city-lights-ui/icons/icon-keybindings.svg');
+          }
+
+          &.icon-package:before {
+            background-image: url('atom://city-lights-ui/icons/icon-packages.svg');
+          }
+
+          &.icon-paintcan:before {
+            background-image: url('atom://city-lights-ui/icons/icon-themes.svg');
+          }
+
+          &.icon-cloud-download:before {
+            background-image: url('atom://city-lights-ui/icons/icon-updates.svg');
+          }
+
+          &.icon-plus:before {
+            background-image: url('atom://city-lights-ui/icons/icon-install.svg');
+          }
+        }
+
+        &.active {
+          a {
+            color: #cbd1e1;
+            border-left: 3px solid #478dff;
+            padding: 10px 10px 10px 21px;
+
+            &.icon-settings:before {
+              background-image: url('atom://city-lights-ui/icons/icon-core-active.svg');
+            }
+
+            &.icon-code:before {
+              background-image: url('atom://city-lights-ui/icons/icon-editor-active.svg');
+            }
+
+            &.icon-keyboard:before {
+              background-image: url('atom://city-lights-ui/icons/icon-keybindings-active.svg');
+            }
+
+            &.icon-package:before {
+              background-image: url('atom://city-lights-ui/icons/icon-packages-active.svg');
+            }
+
+            &.icon-paintcan:before {
+              background-image: url('atom://city-lights-ui/icons/icon-themes-active.svg');
+            }
+
+            &.icon-cloud-download:before {
+              background-image: url('atom://city-lights-ui/icons/icon-updates-active.svg');
+            }
+
+            &.icon-plus:before {
+              background-image: url('atom://city-lights-ui/icons/icon-install-active.svg');
+            }
+          }
+        }
+      }
+    }
+
+    .button-area {
+      .btn {
+        position: absolute;
+        bottom: 24px;
+        left: 24px;
+        width: 172px;
+        height: 32px;
+        border-radius: 3px;
+        background-color: #333f4a;
+        box-shadow: 0 0.5px 3px 0 rgba(12, 16, 21, 0.2);
+        border: 1px solid #161b21;
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: -0.5px;
+        text-align: center;
+        color: #b7c5d3;
+
+        &:hover {
+          background: #3f505f;
+        }
+
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .status-indicator {
+    padding: 0;
+    width: 8px;
+    min-width: 4px;
+    pointer-events: none;
+    margin:0 0 0 -5px !important;
+    transition: background .4s;
+    background: #36904b !important;
+    &.is-disabled {
+      background: #b7761e !important;
+    }
+  }
+
+  .section {
+    padding: 20px 32px;
+    border-top: 0;
+
+    .section-heading {
+      &:before {
+        display: none;
+      }
+      // hide icon at title
+      font-size: 16px;
+      font-weight: 600;
+      text-align: left;
+      color: #edf2f7;
+      margin: 0 0 2px;
+      // &:nth-child(1) {
+      //   font-size:20px;
+      // }
+    }
+
+    .sub-section {
+      margin: 52px 0;
+    }
+
+    .sub-section-heading {
+      font-size: 16px;
+      font-weight: 600;
+      color: #edf2f7;
+      margin: 0 0 2px;
+
+      &:before {
+        display: none;
+      }
+
+      *:before {
+        display: none;
+      }
+    }
+
+    .section-heading-count {
+      margin-left: 8px;
+      border-radius: 9.5px;
+      background-color: #70e1e8;
+      font-size: 11px;
+      font-weight: 600;
+      color: #131920;
+    }
+
+    .text {
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 1.5;
+      text-align: left;
+      color: #b7c5d3;
+
+      &:before {
+        display: none;
+      }
+
+      .link {
+        color: #33CED8;
+      }
+
+      .icon {
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .package-card {
+    background-color: #262f37;
+    margin-bottom: 12px;
+    padding: 16px 20px 16px 16px !important;
+
+    &:nth-child(1) {
+      margin-top: 13px;
+    }
+
+    .card-name {
+      font-size: 13px;
+      font-weight: 500;
+      text-align: left;
+      color: #b7c5d3;
+      margin: 0;
+
+      .package-name {
+        font-size: 13px;
+        font-weight: 500;
+        color: #b7c5d3;
+      }
+
+      .package-version {
+        font-size: 13px;
+        font-weight: 500;
+        color: rgba(183, 197, 211, 0.6);
+      }
+    }
+
+    .package-description {
+      font-size: 11px;
+      line-height: 1.64;
+      color: #718ca1;
+      margin-bottom: 10px;
+      transform: translateY(-4px);
+    }
+
+    .stats {
+      &-item {
+        font-size: 11px;
+        line-height: 1.64;
+        text-align: right;
+        color: #718ca1;
+
+        .icon {
+          &:before {
+            display: none;
+          }
+
+          &.icon-cloud-download {
+            display: inline-flex;
+            width: 16px;
+            height: 16px;
+            background-image: url('atom://city-lights-ui/icons/icon-download-count.svg');
+            background-position: center center;
+            background-repeat: no-repeat;
+            margin: 0 5px 0 0;
+            transform: translateY(3px);
+          }
+        }
+      }
+    }
+
+    .meta {
+      &-user {
+        img {
+          border-radius: 3px;
+        }
+
+        .author {
+          font-size: 11px;
+          line-height: 1.64;
+          text-align: left;
+          color: rgba(113, 140, 161, 0.8);
+        }
+      }
+
+      &-controls {
+        .btn-toolbar {
+          .btn {
+            &:before {
+              display: none;
+            }
+            border-radius: 3px;
+            margin:0 4px;
+            box-shadow: 0 0.5px 3px 0 rgba(19, 25, 32, 0.1);
+            border: 1px solid #232931;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: -0.5px;
+            text-align: center;
+            transition: 200ms ease;
+            color: #b7c5d3;
+            background-color: #333f4a;
+
+            &:hover {
+              background-color: #3f505f;
+              color: #ecf2f8;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .themes-picker {
+    .themes-picker-item {
+      margin-top: 34px;
+
+      .setting-title {
+        font-size: 14px;
+        font-weight: 500;
+        color: #b7c5d3;
+      }
+
+      .setting-description {
+        font-size: 11px;
+        line-height: 1.64;
+        text-align: left;
+        color: #718ca1;
+      }
+
+      .select-container {
+        .btn {
+          width: 40px;
+          height: 32px;
+          border-radius: 3px;
+          background-color: #333f4a;
+          box-shadow: 0 0.5px 3px 0 rgba(12, 16, 21, 0.2);
+          border: 1px solid #161b21;
+          margin-left: 8px;
+          padding: 0;
+          background-repeat: no-repeat;
+          background-position: center center;
+          transition: 200ms ease;
+
+          &:hover {
+            background-color: #3f505f;
+            color: #ecf2f8;
+          }
+
+          &.icon-gear {
+            background-image: url('atom://city-lights-ui/icons/icon-gear.svg');
+
+            &:before {
+              display: none;
+            }
+
+            &:hover {
+              background-image: url('atom://city-lights-ui/icons/icon-gear-hover.svg');
+            }
+          }
+        }
+      }
+    }
+  }
+}

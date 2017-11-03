@@ -1,0 +1,23 @@
+{
+  "name": "city-lights-ui",
+  "description": "The City Lights UI Theme is a beautiful dark matte Atom UI theme that is designed with a developer's focus in mind.",
+  "repository": "https://github.com/Yummygum/city-lights-ui-atom",
+  "version": "1.0.0",
+  "author": "Noud Adrichem",
+  "theme": "ui",
+  "keywords": [
+    "ui",
+    "theme",
+    "citylights",
+    "city lights",
+    "darktheme",
+    "dark theme",
+    "city-lights-ui",
+    "city-lights-syntax",
+    "city-lights-icons"
+  ],
+  "license": "CC-BY-NC-ND",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
+}

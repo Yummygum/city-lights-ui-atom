@@ -1,0 +1,152 @@
+atom-notification {
+  width: 422px !important;
+
+  &.error,
+  &.fatal {
+    border-radius: 2px;
+    background-image: linear-gradient(to top, #ffffff, #fff1f0), linear-gradient(to top, #ffffff, #f5f8fa);
+    box-shadow: 0 2px 14px 0 rgba(0, 0, 0, 0.5);
+    border-top: 4px solid #cf1d38;
+    padding-left: 0;
+
+    &:before {
+      // hide bug icon on the left side of message
+      display: none;
+    }
+
+    .content {
+      background-color: transparent;
+      color: #41505e;
+
+      .item {
+        &.message {
+          font-weight: bolder;
+        }
+
+        &.detail {
+          margin: 0 16px;
+          padding: 0;
+          background: #f9e0e2;
+          padding: 12px;
+          border: none;
+          color: #d1223c;
+
+          .detail-content {
+            font-size: 12px;
+          }
+
+          .stack-toggle {
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: -0.1px;
+            text-align: left;
+            color: #d1223c;
+            position: relative;
+
+            &:after {
+              content: "\f0a3";
+              font-family: 'Octicons Regular';
+              display: inline-block;
+              top: 6px;
+              width: 6px;
+              height: 6px;
+              left: 0;
+              transform: rotate(-90deg);
+              position: relative;
+              vertical-align: center;
+            }
+
+            .icon {
+              display: none;
+            }
+          }
+        }
+
+        &.meta {
+          border: none;
+
+          .description {
+            font-size: 12px;
+            line-height: 1.5;
+            letter-spacing: -0.1px;
+            text-align: left;
+            color: #41505e;
+
+            a {
+              color: #41505e;
+              font-weight:bolder;
+            }
+          }
+
+          .btn-toolbar {
+            align-items: center;
+            .btn {
+              margin-bottom:0;
+              float:right;
+              border-radius: 4px;
+              background-image: linear-gradient(to bottom, #283139, #181e24);
+              box-shadow: 0 0.5px 1px 0 rgba(0, 0, 0, 0.27);
+              border-style: solid;
+              border-width: 0.5px;
+              border-image-source: linear-gradient(to top, #0b0c0f, #181e24);
+              border-image-slice: 1;
+              color:white;
+              font-weight:bolder;
+            }
+
+            .icon {
+              margin-right:16px;
+              margin-top:4px;
+              float:right;
+              color:#333f4a;
+              &-clippy {
+                height:21px;
+                width:16px;
+                &:before {
+                  height:100%;
+                  width:100%;
+                  content:'';
+                  background: url(atom://city-lights-ui/icons/error-copy-to-cb.svg) no-repeat center center;
+                  background-size:contain;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .close {
+      width: 21px;
+      height: 21px;
+      opacity: 1;
+
+      &:before {
+        content: '';
+        width: 20px;
+        position: absolute;
+        top:8px;
+        left:-6px;
+        height: 20px;
+        background: url(atom://city-lights-ui/icons/error-cross.svg) no-repeat center center;
+        transition:200ms;
+        transform: scale(0.8);
+      }
+
+      &:hover:before {
+        border-radius:21px;
+        background-color: #fadcdd;
+        transform: scale(1);
+      }
+
+      &-all {
+        // max-height:27px;
+      }
+    }
+  }
+  // divider stying
+  &:after {
+    height: 8px;
+    bottom: -8px;
+  }
+}
