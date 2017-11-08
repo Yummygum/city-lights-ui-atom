@@ -10,6 +10,7 @@
 
 body {
   font-size: @font-size;
+  font-family: @font-family;
   color: @text-color;
   background-color: @app-background-color;
 }
@@ -19,4 +20,18 @@ atom-pane {
   &:last-child {
     border-right: none;
   }
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background: @text-color;
 }
