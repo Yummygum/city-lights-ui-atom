@@ -1,5 +1,20 @@
 // Git
+.directory {
+  &.status-ignored .list-item {
+    color: @text-color-subtle !important;
+    .icon::before {
+      opacity: .5
+    }
+  }
+}
+
 .file {
+  &.status-ignored {
+    color: @text-color-subtle !important;
+    .icon::before {
+      opacity: .5
+    }
+  }
   &.status-added,
   &.status-modified {
     color: @text-color !important;
