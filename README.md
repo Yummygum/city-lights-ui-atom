@@ -25,7 +25,7 @@ Are you enjoying the City Lights UI Theme? Don't hesitate to share your exciteme
 The following licensing applies to City Lights Syntax Theme: Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0). For more information go to [https://creativecommons.org/licenses/by-nc-nd/4.0/](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 
 ## Donate
-The City Lights UI Theme is available for free. If you're enjoying the City Lights UI Theme, feel free to help us crank out updates even faster by donating a coffee to us via PayPal.
+The City Lights UI Theme is available for free. If you're enjoying the City Lights UI Theme, feel free to help us crank out updates even faster by donating a coffee to us via [PayPal.](https://paypal.me/yummygum)
 
 Built with `&hearts;` by Yummygum <br/>
 [yummygum.com](https://yummygum.com) <br/>
