@@ -3,6 +3,12 @@
 // Displays selectable tabs above the editor.
 // Overrides: atom/tabs
 
+// .tab-bar .tab.modified:not(:hover) .close-icon {
+//   // keep the modified indicator live regardless of active-ness
+//   opacity: 1;
+//   background-color: @text-color !important;
+// }
+
 .tab-bar {
   background-color: @tab-bar-background-color;
   border-bottom: 0 solid @base-border-color;
@@ -46,7 +52,7 @@
       }
 
       &:hover {
-        background: #99a1b8 url('atom://city-lights-ui/icons/icon-close-tab-hover.svg') no-repeat center center;
+        background: #99a1b8 url('atom://city-lights-ui/icons/icon-close-tab-hover.svg') no-repeat center center !important ;
       }
     }
     // Modified Icon (the blue circle) -------------------
@@ -56,8 +62,25 @@
       background: none;
       width: 6px;
       height: 6px;
-      background-color: #68a1f0;
+      background-color: @text-color;
       border: none;
+      opacity:1;
+
+    }
+
+    &.active.modified {
+      &:hover {
+        .close-icon {
+          background-image: url('atom://city-lights-ui/icons/icon-close-tab.svg');
+          background-color:transparent;
+          &:hover {
+            background-color:#99a1b8;
+          }
+         }
+      }
+      .close-icon {
+        background-color: #68a1f0;
+      }
     }
 
     &.active .close-icon:hover {
