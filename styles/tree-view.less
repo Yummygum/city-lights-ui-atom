@@ -8,12 +8,6 @@
 }
 // hides project tab in tree-view ⬇⬇ (who uses this?)
 
-.atom-dock-inner {
-  .pane .list-inline {
-    display: none;
-  }
-}
-
 .item-views {
   .tree-view-root {
     padding-left: 16px;
@@ -37,7 +31,7 @@
         content: '';
         width: 1px;
         height: 100%;
-        background: #2a2f38;
+        background: @base-background-color;
         position: absolute;
         left: 2px;
         top: 0;
@@ -68,7 +62,7 @@
             width: 3px;
             height: 3px;
             border-radius: 100px;
-            background-color: #2a2f38;
+            background-color: @base-background-color;
             position: absolute;
             left: 17px;
             top: 50% - 3px;
@@ -83,7 +77,7 @@
           border-left: 3px solid #478dff;
           border-radius: 1px 2px 2px 1px;
           left: -1px;
-          background: #2a2f38;
+          background: @base-background-color;
 
           &.status-added,
           &.status-modified {
