@@ -1,0 +1,35 @@
+atom-dock {
+  &.right {
+    atom-pane {
+      border-right: 0 !important;
+    }
+  }
+
+  .atom-dock-resize-handle {
+    background-color: @base-border-color;
+
+    &.left,
+    &.right {
+      width: 1px;
+    }
+
+    &.top,
+    &.bottom {
+      height: 1px;
+    }
+  }
+  .tab-bar {
+    .tab,
+    .tab.active {
+      max-width: none;
+    }
+  }
+
+  .atom-dock-content-wrapper {
+    &.bottom {
+      .tab-bar {
+        padding-top: 0;
+      }
+    }
+  }
+}
