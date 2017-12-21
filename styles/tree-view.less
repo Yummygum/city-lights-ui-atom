@@ -2,7 +2,6 @@
 // -------------------
 // Used to explore and open files in the current project.
 // Overrides: atom/tree-view
-
 .tree-view-resizer {
   border-right: 0 solid @base-border-color;
 }
@@ -10,7 +9,11 @@
 
 .atom-dock-inner {
   .pane .list-inline {
-    display: none;
+    .tab {
+      .title:before {
+        display: none;
+      }
+    }
   }
 }
 

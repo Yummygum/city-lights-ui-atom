@@ -9,7 +9,8 @@
     .editor.mini {
       opacity: 1;
       border-radius: 3px;
-      line-height: 32px;
+      height:32px;
+      line-height: 30px;
       background-color: #131920 !important;
       font-family: @font-family, monospace;
     }
@@ -117,6 +118,7 @@
             margin-right: 9px;
             background-position: center center;
             background-repeat: no-repeat;
+            background-size:contain;
           }
 
           &.icon-settings:before {
@@ -146,6 +148,10 @@
 
           &.icon-plus:before {
             background-image: url('atom://city-lights-ui/icons/icon-install.svg');
+          }
+
+          &.icon-link:before {
+            background-image: url('atom://city-lights-ui/icons/icon-uri.svg')
           }
         }
 
@@ -181,6 +187,10 @@
 
             &.icon-plus:before {
               background-image: url('atom://city-lights-ui/icons/icon-install-active.svg');
+            }
+
+            &.icon-link:before {
+              background-image: url('atom://city-lights-ui/icons/icon-uri-active.svg')
             }
           }
         }

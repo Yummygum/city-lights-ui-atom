@@ -6,6 +6,29 @@
       opacity: .5
     }
   }
+
+  .header.list-item {
+    position: relative;
+    &:after {
+      content: '';
+      display: flex;
+      align-items: center;
+      position: absolute;
+      width:10px;
+      height:10px;
+      top:50%;
+      transform:translateY(-50%);
+      right:10px;
+    }
+  }
+
+  &.status-added .header.list-item:after {
+    content: url('atom://city-lights-ui/icons/git-added.svg');
+  }
+
+  &.status-modified .header.list-item:after {
+    content: url('atom://city-lights-ui/icons/git-modified.svg');
+  }
 }
 
 .file {

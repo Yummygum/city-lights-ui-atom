@@ -5,6 +5,13 @@
   "version": "1.2.0",
   "author": "Noud Adrichem",
   "theme": "ui",
+  "main": "lib/main",
+  "configSchema": {
+    "showTabsInTreeView": {
+      "type": "boolean",
+      "default": false
+    }
+  },
   "keywords": [
     "ui",
     "theme",

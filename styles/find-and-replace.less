@@ -5,6 +5,17 @@
 // Find and replace in the current buffer or across the entire project.
 // Overrides: atom/find-and-replace
 
-.find-and-replace {
+.find-and-replace,
+.input-block {
   border-top: 1px solid @base-border-color;
+
+  .editor.mini {
+    .line span {
+      color:@text-color-highlight;
+    }
+  }
+}
+
+.find-and-replace .find-container .editor {
+  padding-right:91px;
 }
