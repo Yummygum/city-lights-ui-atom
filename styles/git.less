@@ -1,5 +1,5 @@
 // Git
-.directory {
+.directory.entry {
   &.status-ignored .list-item {
     color: @text-color-subtle !important;
     .icon::before {
@@ -7,7 +7,7 @@
     }
   }
 
-  .header.list-item {
+  .list-item {
     position: relative;
     &:after {
       content: '';
@@ -22,11 +22,11 @@
     }
   }
 
-  &.status-added .header.list-item:after {
+  &.status-added > .header.list-item:after {
     content: url('atom://city-lights-ui/icons/git-added.svg');
   }
 
-  &.status-modified .header.list-item:after {
+  &.status-modified > .header.list-item:after {
     content: url('atom://city-lights-ui/icons/git-modified.svg');
   }
 }
