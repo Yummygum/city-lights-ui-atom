@@ -27,7 +27,7 @@ The following licensing applies to City Lights Syntax Theme: Attribution-NonComm
 ## Donate
 The City Lights UI Theme is available for free. If you're enjoying the City Lights UI Theme, feel free to help us crank out updates even faster by donating a coffee to us via [PayPal.](https://paypal.me/yummygum)
 
-Built with `&hearts;` by Yummygum <br/>
+Built with &hearts; by Yummygum <br/>
 [yummygum.com](https://yummygum.com) <br/>
 [twitter.com/yummygum](https://twitter.com/yummygum) <br/>
 [instagram.com/yummygum](https://instagram.com/yummygum) <br/>
