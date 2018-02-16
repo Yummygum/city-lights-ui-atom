@@ -24,20 +24,20 @@
     min-width: inherit;
   }
 
-  &::-webkit-scrollbar{
-    display: none;
-    transition: 200ms;
-  }
-
-  &:hover::-webkit-scrollbar{
-    display: block;
-    transition: 200ms;
-  }
-
   .tree-view {
     margin-top: 11px;
     color: @text-color !important;
     background-color: @tree-view-background-color;
+
+    &::-webkit-scrollbar{
+      display: none;
+      transition: 200ms;
+    }
+
+    &:hover::-webkit-scrollbar{
+      display: block;
+      transition: 200ms;
+    }
 
     .list-tree {
       position: relative;
