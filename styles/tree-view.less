@@ -24,6 +24,16 @@
     min-width: inherit;
   }
 
+  &::-webkit-scrollbar{
+    display: none;
+    transition: 200ms;
+  }
+
+  &:hover::-webkit-scrollbar{
+    display: block;
+    transition: 200ms;
+  }
+
   .tree-view {
     margin-top: 11px;
     color: @text-color !important;
