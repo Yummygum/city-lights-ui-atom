@@ -30,12 +30,14 @@
     background-color: @tree-view-background-color;
 
     &::-webkit-scrollbar{
+      opacity: 0;
       display: none;
       transition: 200ms;
     }
 
     &:hover::-webkit-scrollbar{
       display: block;
+      opacity: 1 !important;
       transition: 200ms;
     }
 
