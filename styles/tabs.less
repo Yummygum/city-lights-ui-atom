@@ -20,7 +20,6 @@
     height: @tab-height;
     line-height: @tab-height;
     font-size: inherit;
-    // font-size: @font-size;
     border-right: 1px solid @tab-border-color;
     background-color: @tab-background-color;
     border-radius: 1px;
@@ -125,6 +124,24 @@
         position: relative;
         width:16px;
         top: 0;
+      }
+    }
+
+    &.small {
+      line-height: @tab-height - 13px !important;
+      height: @tab-height - 13px !important;
+
+      .close-icon {
+        margin-top: 5.5px;
+      }
+    }
+
+    &.large {
+      line-height: @tab-height + 8px !important;
+      height: @tab-height + 8px !important;
+
+      .close-icon {
+        margin-top: 16px;
       }
     }
   }
