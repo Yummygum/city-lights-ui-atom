@@ -15,7 +15,7 @@
       "title": "UI Font Size",
       "description": "Change the font size for the UI theme.",
       "type": "integer",
-      "default": 13,
+      "default": 11,
       "enum": [
         9,
         10,

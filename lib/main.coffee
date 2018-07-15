@@ -27,7 +27,7 @@ showTabBarInTreeView = (boolean) ->
 setSize = (currentFontSize) ->
   for span, i in treeViewTitles
     span.style.fontSize = currentFontSize + 'px'
-    if currentFontSize >= 13
+    if currentFontSize >= 11
       span.style.lineHeight = 2.4
     else
       span.style.lineHeight = 2.1
