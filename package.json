@@ -10,6 +10,22 @@
     "showTabsInTreeView": {
       "type": "boolean",
       "default": false
+    },
+    "fontSize": {
+      "title": "UI Font Size",
+      "description": "Change the font size for the UI theme.",
+      "type": "integer",
+      "default": 13,
+      "enum": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ]
     }
   },
   "keywords": [
