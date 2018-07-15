@@ -29,6 +29,10 @@
     color: @text-color !important;
     background-color: @tree-view-background-color;
 
+    span.name {
+      font-size: 13px;
+    }
+
     &::-webkit-scrollbar{
       opacity: 0;
       display: none;
@@ -59,7 +63,7 @@
       }
 
       .list-item {
-        line-height: 28px;
+        // line-height: 2.3;
         position: relative;
         color: @text-color;
         cursor: pointer;
@@ -90,11 +94,17 @@
           }
         }
 
+        .name {
+          &:before {
+            top: 0;
+          }
+        }
+
         &.selected {
           margin: 0;
           color: #cbd1e1 !important;
           padding-left: 35px !important;
-          height: 28px;
+          // height: 28px;
           border-left: 3px solid #478dff;
           border-radius: 1px 2px 2px 1px;
           left: -1px;
