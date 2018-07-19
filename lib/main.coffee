@@ -4,6 +4,13 @@ treeViewTitles = document.querySelectorAll('.tree-view span.name')
 
 module.exports =
   activate: (state) ->
+    console.log 'activate city lights ui ', state
+
+    tabSizeValue = atom.config.get('city-lights-ui.tabSize')
+    fontSizeValue = atom.config.get('city-lights-ui.fontSize')
+    setSize(fontSizeValue)
+    changeTabBarSize(tabSizeValue)
+
     atom.config.observe 'city-lights-ui.showTabsInTreeView', (newValue) ->
       showTabBarInTreeView(newValue)
 
@@ -25,12 +32,19 @@ showTabBarInTreeView = (boolean) ->
 
 
 setSize = (currentFontSize) ->
-  for span, i in treeViewTitles
-    span.style.fontSize = currentFontSize + 'px'
-    if currentFontSize >= 11
-      span.style.lineHeight = 2.4
-    else
-      span.style.lineHeight = 2.1
+  root.style.fontSize = currentFontSize + 'px'
+  if currentFontSize >= 11
+    root.style.lineHeight = 2.4
+  else
+    root.style.lineHeight = 2.1
+  # for span, i in treeViewTitles
+  #   span.style.fontSize = currentFontSize + 'px'
+    # if currentFontSize >= 11
+    #   span.style.lineHeight = 2.4
+    # else
+    #   span.style.lineHeight = 2.1
+
+
 
 unsetSize = () ->
   for span, i in treeViewTitles
@@ -59,4 +73,12 @@ changeTabBarSize = (tabValue) ->
 
 atom.workspace.observeActivePaneItem (editor) ->
   tabSizeValue = atom.config.get('city-lights-ui.tabSize')
+  fontSizeValue = atom.config.get('city-lights-ui.fontSize')
+  setSize(fontSizeValue)
+  changeTabBarSize(tabSizeValue)
+
+atom.workspace.observeActivePaneItem (editor) ->
+  tabSizeValue = atom.config.get('city-lights-ui.tabSize')
+  fontSizeValue = atom.config.get('city-lights-ui.fontSize')
+  setSize(fontSizeValue)
   changeTabBarSize(tabSizeValue)
