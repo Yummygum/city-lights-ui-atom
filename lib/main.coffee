@@ -1,6 +1,4 @@
 root = document.documentElement
-treeViewTab = root.querySelector '.tab[data-type="TreeView"]'
-treeViewTitles = document.querySelectorAll('.tree-view span.name')
 
 module.exports =
   activate: (state) ->
@@ -25,11 +23,9 @@ module.exports =
 
 
 showTabBarInTreeView = (boolean) ->
-  if boolean
-    treeViewTab.parentElement.style.display = 'flex'
-  else
-    treeViewTab.parentElement.style.display = 'none'
-
+  treeViewTab = root.querySelector '.tab[data-type="TreeView"]'
+  if treeViewTab?
+      treeViewTab.parentElement.style.display = if boolean then 'flex' else 'none'
 
 setSize = (currentFontSize) ->
   root.style.fontSize = currentFontSize + 'px'
@@ -39,6 +35,7 @@ setSize = (currentFontSize) ->
     root.style.lineHeight = 2.1
 
 unsetSize = () ->
+  treeViewTitles = document.querySelectorAll('.tree-view span.name')
   for span, i in treeViewTitles
     span.style.fontSize = ''
 
@@ -66,10 +63,11 @@ changeTabBarSize = (tabValue) ->
 observeEditorsOnEvents = ->
   tabSizeValue = atom.config.get('city-lights-ui.tabSize')
   fontSizeValue = atom.config.get('city-lights-ui.fontSize')
+  showTabBarInTreeView()
   setSize(fontSizeValue)
   changeTabBarSize(tabSizeValue)
 
-atom.workspace.observeActivePaneItem (editor) ->
+atom.workspace.observePaneItems (item) ->
   observeEditorsOnEvents()
 
 atom.workspace.observeTextEditors (editor) ->
