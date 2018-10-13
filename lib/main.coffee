@@ -1,5 +1,5 @@
 root = document.documentElement
-tabsInTreeView = root.querySelector '.list-inline.tab-bar.inset-panel'
+treeViewTab = root.querySelector '.tab[data-type="TreeView"]'
 treeViewTitles = document.querySelectorAll('.tree-view span.name')
 
 module.exports =
@@ -26,9 +26,9 @@ module.exports =
 
 showTabBarInTreeView = (boolean) ->
   if boolean
-    tabsInTreeView.style.display = 'flex'
+    treeViewTab.parentElement.style.display = 'flex'
   else
-    tabsInTreeView.style.display = 'none'
+    treeViewTab.parentElement.style.display = 'none'
 
 
 setSize = (currentFontSize) ->
